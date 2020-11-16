@@ -60,7 +60,7 @@ function getPasswordOptions() {
   var passwordOptions = {
     length: length,
     haslowercasecharacters: haslowercasecharacters,
-    hasuppercasecharacters: haslowercasecharacters,
+    hasuppercasecharacters: hasuppercasecharacters,
     hasnumericcharacters: hasnumericcharacters,
     hasspecialcharacters: hasspecialcharacters
   };
