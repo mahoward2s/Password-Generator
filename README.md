@@ -10,5 +10,7 @@ You have the options to choose uppercase, lowercase, numeric, and special charac
 Then when you have made your selections it will randomly assign you a password with your criteria.
 
 <!--Link To Active Site-->
+https://mahoward2s.github.io/Password-Generator/
 
 <!--Screen Capture Of Site-->
+![image](https://user-images.githubusercontent.com/70785957/99463732-070b9000-28fc-11eb-8bd1-b316f6addb74.png)
