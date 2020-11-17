@@ -13,4 +13,4 @@ Then when you have made your selections it will randomly assign you a password w
 https://mahoward2s.github.io/Password-Generator/
 
 <!--Screen Capture Of Site-->
-![image](https://user-images.githubusercontent.com/70785957/99463732-070b9000-28fc-11eb-8bd1-b316f6addb74.png)
+![image](https://user-images.githubusercontent.com/70785957/99464470-d88eb480-28fd-11eb-99bc-fe9bd3300ac8.png)
