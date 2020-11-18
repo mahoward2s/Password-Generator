@@ -5,7 +5,7 @@ var lowerCaseCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"
 var upperCaseCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 // Numeric Array
-var numericCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9" ];
+var numericCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 // Special Characters Array
 var specialCharacters = ["!", "#", "$", "%", "&", "'", ")", "(", "*", "+", "-", "/", ":", "<", "=", ">", "?", "@", "]", "[", "^", "_", "~", "}", "{"];
@@ -78,6 +78,7 @@ function getRandom(arr) {
 
 //Function to generate password with user input
 function generatePassword() {
+
   var options = getPasswordOptions();
   //Variable to store password as it's being concatenated
   var result = [];
@@ -85,7 +86,7 @@ function generatePassword() {
   //Array to store types of characters to include in password
   var possibleCharacters = [];
 
-  //Array to contain one of each type of chosen character to ensure each will be used
+  //Array to contain one of each chosen characters
   var guaranteedCharacters = [];
 
   //Conditional statement that adds array of lowercase characters into array of possible characters based on user input
@@ -116,26 +117,25 @@ function generatePassword() {
     guaranteedCharacters.push(getRandom(specialCharacters));
   }
 
-  //For loop to iterate over the password length from the options object, selecting random indices from the array of possible characters and concatenats
+  //Skip over object length and choose from arrays to concatenate to form password.
   for (var i = 0; i < options.length; i++) {
-    var possibleCharacters = getRandom(possibleCharacters);
-
-    result.push(possibleCharacters);
+    var character = getRandom(possibleCharacters)
+    result.push(character)
   }
 
-  //Mix in at least one of each guaranteed character in the result
+  //Randomly mix each guaranteed character into results
   for (var i = 0; i < guaranteedCharacters.length; i++) {
     result[i] = guaranteedCharacters[i];
   }
 
-  //Transform the result into a string and pass into writePassword
+  //Make a string and put int writepassword
   return result.join("");
 }
 
-//Get references to the #generate element
+//Get references to the #generate element (Given)
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+// Write password to the #password input (Given)
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -143,5 +143,8 @@ function writePassword() {
   passwordText.value = password;
 }
 
-//Add event listener to generate button
+//Add event listener to generate button (Given)
 generateBtn.addEventListener("click", writePassword);
+
+/*Got assistance from TA tutorial, Slack instant helper (Andrew), StackOver flo, and Youtube Tutorial*/
+//Majority came from TA tutorial and Slack Instant Helper (Andrew)
